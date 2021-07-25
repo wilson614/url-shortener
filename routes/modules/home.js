@@ -17,6 +17,8 @@ router.get('/:shortenCode', (req, res) => {
     .then(url => {
       if (url) {
         res.redirect(url.origin)
+      } else {
+        res.render('index', { shortenCode })
       }
     })
     .catch(error => console.log(error))
