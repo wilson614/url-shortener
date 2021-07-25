@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Url = require('../../models/url')
-const mainUrl = 'http://localhost:3000/'
+const mainUrl = process.env.MAIN_URL || 'http://localhost:3000/'
 
 const codeGenerator = require('../../codeGenerator')
 
